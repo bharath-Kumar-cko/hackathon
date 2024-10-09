@@ -1,0 +1,33 @@
+GET http://localhost:5000/health-check
+####
+
+POST http://localhost:5000/tasks
+Content-Type: application/json
+
+{
+  "title": "Build Tests",
+  "description": "Create the API endpoint for task creation",
+  "status": "In Progress",
+  "assignee": "John Doe",
+  "priority": 1,
+  "storyPoints": 3,
+  "labels": ["backend", "API"],
+  "comments": [
+    {
+      "text": "This is a high-priority task, please finish by Friday."
+    },
+    {
+      "text": "Make sure to include validation."
+    }
+  ]
+}
+
+####
+
+GET http://localhost:5000/tasks
+
+####
+
+GET http://localhost:5000/tasks/6704f4019f935b1c55fc254e
+
+####
