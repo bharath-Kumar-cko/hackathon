@@ -1,0 +1,17 @@
+{
+  "name": "untitled-folder",
+  "version": "1.0.0",
+  "description": "docker run -d \\  --name mongodb \\  -p 27017:27017 \\  -v mongodb_data:/data/db \\  mongo",
+  "main": "index.js",
+  "scripts": {
+  "install-all": "cd frontend && npm install && cd ../backend && npm install",
+  "start": "concurrently \"cd frontend && npm run dev\" \"cd backend && npm run dev\"",
+  "dev": "npm run install-all && npm run start",
+  "build": "cd frontend && npm install && npm run build && cd ../backend && npm install && npm run build"
+},
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
